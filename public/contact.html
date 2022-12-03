@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Double Crown Farms</title>
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+	<div class="jumbotron jumbotron-sub">
+		<nav class="navbar">
+			<div class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+						aria-expanded="false" aria-controls="navbar">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span><span class="glyphicon glyphicon-th-list"></span>
+					</button>
+					<a class="navbar-brand" href="#">Double Crown</a>
+				</div>
+				<div id="navbar" class="collapse navbar-collapse">
+					<ul class="nav navbar-nav navbar-right">
+						<li class="active"><a href="index.html">Home</a></li>
+						<li><a href="about.html">About</a></li>
+						<li><a href="services.html">Services</a></li>
+						<li><a href="contact.html">Contact</a></li>
+					</ul>
+				</div>
+				<!--/.nav-collapse -->
+			</div>
+		</nav>
+
+		<div class="container">
+			<h1>Contact Us</h1>
+		</div>
+	</div>
+
+	<div class="container">
+		<div class="row">
+			<div class="col-md-8">
+				<div class="panel panel-default">
+					<div class="panel-heading" style="background-color:lightgreen;">
+						<h3 class="panel-title">Contact Us</h3>
+					</div>
+					<div class="panel-body">
+						<p>Please fill out this form to contact us</p>
+						<form>
+							<div class="form-group">
+								<label>Name</label>
+								<input type="text" class="form-control" placeholder="Enter Name" id="name" name="name"
+									required>
+							</div>
+							<div class="form-group">
+								<label>Email</label>
+								<input type="email" class="form-control" placeholder="E-mail" id="email" name="email"
+									required>
+							</div>
+							<div class="form-group">
+								<label>Message</label>
+								<textarea class="form-control" placeholder="Enter Message Here" id="message" required
+									name="message"></textarea>
+							</div>
+
+							<button onclick="submitMessage()" class="btn btn-success">Submit</button>
+						</form>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-4">
+				<div class="well" style="background-color:lightgreen;">
+					<h3 style="text-decoration: underline;">Poultry Feed Calculator</h3>
+					<p>Click the button below to calculate daily feed requirements for your layers and broiler birds.
+					</p>
+					<a href="https://6376851222977005ff0e9a38--magnificent-zabaione-63e3d5.netlify.app/public/index.html"
+						target="_blank">
+						<button class="btn btn-success">Calculate Feed</button>
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script>
+		function submitMessage() {
+			name = document.getElementById("name").value;
+			email = document.getElementById("email").value;
+			message = document.getElementById("message").value;
+
+			if (name == null || name.trim().length <= 4) {
+				alert("Please fill in your full name");
+			} else if (email == null || email.trim().length == 0) {
+				alert("Please fill in your e-mail address");
+			} else if (message == null || message.trim().length <= 0) {
+				alert("Please enter your message");
+			} else {
+				if (message == null || message.trim().length <= 15) {
+					alert("Please give more details in your message");
+
+				} else {
+					alert("Message sent successfully. Thank you for your reaching out.");
+				}
+			}
+		}
+	</script>
+	<footer class="main-footer">
+		<div class="container" style="text-align:center;">
+			<h3>About Us</h3>
+			<p>We specialize in delivering different farm inputs and farm services.</p>
+			<p>Copyright &copy; 2022 Adepoju D. Akinade</p>
+		</div>
+		</div>
+	</footer>
+
+	<script src="https://code.jquery.com/jquery-1.12.4.js"
+		integrity="sha256-Qw82+bXyGq6MydymqBxNPYTaUXXq7c8v3CwiYwLLNXU=" crossorigin="anonymous"></script>
+	<script src="js/bootstrap.js"></script>
+</body>
+
+</html>
